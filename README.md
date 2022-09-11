@@ -14,10 +14,15 @@ Repo containing references, implementations, papers w.r.t to Instance Segmentati
 - [Best results from competitions](https://www.kaggle.com/competitions/severstal-steel-defect-detection/discussion/101698#585658)
 - []()
 
-## Code implementations
+## Mask RCNN Code implementations
 - [Matterport official MaskRCNN implementation](https://github.com/matterport/Mask_RCNN)
-- [Pytorch Mask RCNN implementation](https://github.com/multimodallearning/pytorch-mask-rcnn)
-- [FAIR initial Mask RCNN benchmark](https://github.com/facebookresearch/maskrcnn-benchmark)
+- [Mask RCNN usage explained](https://learnopencv.com/mask-r-cnn-instance-segmentation-with-pytorch/)
+- [torchvision official implementation](https://github.com/pytorch/vision/tree/main/torchvision/models/detection)
+- [Custom Pytorch Mask RCNN implementation](https://github.com/multimodallearning/pytorch-mask-rcnn)
+- [Mask RCNN for medical image segmentation](https://bjornkhansen95.medium.com/mask-r-cnn-for-segmentation-using-pytorch-8bbfa8511883)
+
+
+## DL libraries / frameworks
 - [FAIR Detectron2 git repo](https://github.com/facebookresearch/detectron2)
 - [MMlab detection library](https://github.com/open-mmlab/mmdetection)
 - [rwightman image models](https://github.com/rwightman/pytorch-image-models)
