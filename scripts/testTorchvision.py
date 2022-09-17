@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
 
-
+import torch
 import torchvision
 import torchvision.transforms as T
 
@@ -93,24 +93,26 @@ if __name__ == "__main__":
 
     model = torchvision.models.detection.maskrcnn_resnet50_fpn(pretrained=True)
     model.eval();
+    testImg = torch.Tensor(3,180, 320)
+    pred = model([testImg])
 
-    img_path = 'testImage.jpg'
-    threshold=0.5
-    rect_th=3
-    text_size=3
-    text_th=3    
+    # img_path = 'testImage.jpg'
+    # threshold=0.5
+    # rect_th=3
+    # text_size=3
+    # text_th=3    
 
-    masks, boxes, pred_cls = get_prediction(img_path, threshold=threshold)
+    # masks, boxes, pred_cls = get_prediction(img_path, threshold=threshold)
 
-    img = cv2.imread(img_path)
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    for i in range(len(masks)):
-        rgb_mask = random_colour_masks(masks[i])
-        img = cv2.addWeighted(img, 1, rgb_mask, 0.5, 0)
-    #     cv2.rectangle(img, boxes[i][0], boxes[i][1],color=(0, 255, 0), thickness=rect_th)
-    #     cv2.putText(img,pred_cls[i], boxes[i][0], cv2.FONT_HERSHEY_SIMPLEX, text_size, (0,255,0),thickness=text_th)
-    plt.figure(figsize=(20,30))
-    plt.imshow(img)
-    plt.xticks([])
-    plt.yticks([])
-    plt.show()
+    # img = cv2.imread(img_path)
+    # img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    # for i in range(len(masks)):
+    #     rgb_mask = random_colour_masks(masks[i])
+    #     img = cv2.addWeighted(img, 1, rgb_mask, 0.5, 0)
+    # #     cv2.rectangle(img, boxes[i][0], boxes[i][1],color=(0, 255, 0), thickness=rect_th)
+    # #     cv2.putText(img,pred_cls[i], boxes[i][0], cv2.FONT_HERSHEY_SIMPLEX, text_size, (0,255,0),thickness=text_th)
+    # plt.figure(figsize=(20,30))
+    # plt.imshow(img)
+    # plt.xticks([])
+    # plt.yticks([])
+    # plt.show()
